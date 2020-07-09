@@ -1,5 +1,5 @@
 # Autoencoder
-An implementation of auto-encoder (VAE) for MNIST
+An implementation of auto-encoder for MNIST
 
 ## Results
 
