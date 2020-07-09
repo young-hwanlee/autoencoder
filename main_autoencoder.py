@@ -1,13 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon., Oct. 14, 2019
-
-@author: young-hwanlee
-
--> test the autoencoder using MNIST
-"""
-
 #%%
 import os
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
