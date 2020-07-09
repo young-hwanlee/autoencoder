@@ -26,13 +26,14 @@ tf.reset_default_graph()
 tf.set_random_seed(seed)
 np.random.seed(seed)
 
+## Set up the hyperparameters
 scale_weights = 1e-4
 learning_rate = 1e-1
 n_epochs = 50
 batch_size = 100
 
 #%%
-## [construction phase]
+## [Construction phase]
 n_inputs = 28*28
 n_hidden1 = 256
 n_hidden2 = 256
@@ -80,6 +81,7 @@ with tf.name_scope("train"):  # to group related nodes
     training_op = optimizer.minimize(loss)
 
 #%%
+## [Excution phase]
 init = tf.global_variables_initializer()
 saver = tf.train.Saver()  # to save the trained model parameters to disk
 
@@ -107,6 +109,7 @@ with tf.Session() as sess:
     X_prime_check = X_prime.eval(feed_dict={X: X_val})
 
 #%%
+## Check the results
 print("MSE : ", np.sum(np.square(X_val - X_prime_check))/(np.shape(X_val)[0]*np.shape(X_val)[1]))
 
 plt.figure()
