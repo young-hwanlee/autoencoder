@@ -30,7 +30,6 @@ scale_weights = 1e-4
 learning_rate = 1e-1
 n_epochs = 50
 batch_size = 100
-epsilon = 1e-35
 
 #%%
 ## [construction phase]
